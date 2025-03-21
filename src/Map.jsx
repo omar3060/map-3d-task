@@ -30,7 +30,7 @@ function Map() {
 
   const updateMapTexture = (layerUrl) => {
     textureLoader.load(
-      `https://cors-anywhere.herokuapp.com/${layerUrl}`,
+      `${layerUrl}`,
       (texture) => setMapTexture(texture),
       undefined,
       (err) => console.error('Error loading texture:', err)
@@ -59,7 +59,7 @@ function Map() {
         )}
 
         <Buildings />
-        
+
         <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
       </Canvas>
     </>
