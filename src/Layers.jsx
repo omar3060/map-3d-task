@@ -1,6 +1,6 @@
 import React from "react";
 
-const Layers = React.memo(({ layers, updateMapTexture }) => {
+const Layers = ({ layers, updateMapTexture }) => {
 
   return (
     <div style={{ position: 'absolute', top: 10, left: 10, zIndex: 1 }}>
@@ -11,6 +11,6 @@ const Layers = React.memo(({ layers, updateMapTexture }) => {
     }
   </div>
   );
-});
+};
 
 export default Layers;

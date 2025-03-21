@@ -1,14 +1,14 @@
 import React from "react";
 import { useGLTF } from "@react-three/drei";
 
-const Model = React.memo(({ url, position, scale }) => {
+const Model = ({ url, position, scale }) => {
   const { scene } = useGLTF(url);
   return (
       <primitive object={scene} position={position} scale={scale} />
   );
-})
+}
 
-const Buildings = React.memo(() => {
+const Buildings = () => {
   const buildingLat = 30.609445;
   const buildingLon = 32.275026;
 
@@ -19,12 +19,12 @@ const Buildings = React.memo(() => {
   return (
     <>
       <Model
-        url="/public/models/asia_building.glb"
+        url="/models/asia_building.glb"
         position={[buildingX, 0, 0]}
         scale={buildingScale}
       />
     </>
   );
-});
+};
 
 export default Buildings;
